@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- to send value to server use property name for every input -->
+    <form method="post" >
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+        <br />
+        <br />
+        <input type="file" />
+        <br />
+        <br />
+        <input name="email" type="email" required placeholder="email" />
+        <br />
+        <br />
+        <input name="password" type="password" required placeholder="password" />
+        <br />
+        <br />
+        <input name="date" type="date" />
+        <br />
+        <br />
+        <label for="number">Number</label>
+        <br />
+        <select name="num" id="number">
+            
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br />
+        <br />
+        <input value="M" type = "radio" name="gender">
+        <label>Male</label>
+        <br />
+        <br />
+        <input value="F" type = "radio" name="gender">
+        <label >Female</label>
+        <br />
+        <br />
+
+
+        
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
