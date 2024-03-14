@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Learning react</title>
+</head>
+
+<body>
+    <h1 id="heading">hello world top of root</h1>
+    <div id="root">
+        <h1>hello world</h1>  <!-- this will be replaced by react -->
+    </div>
+    <h1 id="heading">hello world below root</h1>
+    <div id="div2"></div>
+    <!-- <script>
+        document.getElementById('root').appendChild(document.createElement('h1')).innerHTML="hello world I am here";
+    </script> -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./App.js"></script>
+</body>
+
+</html>
