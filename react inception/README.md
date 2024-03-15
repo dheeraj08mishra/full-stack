@@ -1,0 +1,17 @@
+# parcel is doing following
+- Dev build
+- local server
+- HMR -> Hot module replacement
+- uses file watching algo - written in c++
+- faster builds by caching 
+- image optimization
+- minification
+- bundling
+- compressing the file
+- consistent Hashing
+- code Splitting
+- differntial bundling  - to support of older browser
+- diagonstic
+- error handling
+- HTTPS support
+- tree shaking algo- renove unused code
