@@ -8,7 +8,7 @@
 - minification
 - bundling
 - compressing the file
-- consistent Hashing
+- consistent Hashing --->
 - code Splitting
 - differntial bundling  - to support of older browser
 - diagonstic
