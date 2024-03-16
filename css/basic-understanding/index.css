@@ -1,0 +1,22 @@
+/* CSS -> cascade(overwrite) style sheet */
+h4{
+    color: royalblue;
+    font-size: 30px;
+    border: 2px solid black;
+}
+#para {
+    color: red;
+    font-size: 30px;
+    border: 2px solid rebeccapurple;
+    text-decoration: underline;
+    font-family: 'times new roman';
+    margin: 5px;
+}
+.div-class{
+    color: green;
+    font-size: 30px;
+    border: 2px solid peru;
+    text-decoration: underline;
+    font-family: 'times new roman';
+    margin: 2px;
+}
