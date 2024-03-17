@@ -20,3 +20,31 @@ h4{
     font-family: 'times new roman';
     margin: 2px;
 }
+p.para-class{
+    color: blue;
+    font-size: 30px;
+    border: 2px solid rebeccapurple;
+    text-decoration: underline;
+    font-family: 'times new roman';
+    margin: 5px;
+}
+
+#parent{
+    font-size: 30px;
+}
+h1{
+    font-size: 20px;
+}
+h2{
+    font-size: 1em;
+}
+
+:root{
+    --main-bg-color: brown;
+    --main-txt-color: white;
+    font-size: 40px;
+}
+h3{
+font-size: 1rem;
+
+}
