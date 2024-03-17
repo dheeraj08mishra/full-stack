@@ -28,4 +28,3 @@ square4 is assigned 16
 */
 console.log(square2);
 console.log(square4);
-
