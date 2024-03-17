@@ -1,0 +1,23 @@
+/* first question */
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+p.highlight {
+    background-color: yellow;
+}
+
+p#special {
+    font-size: 20px;
+}
+
+
+input[type="text"] {
+    border: solid grey 10px;
+}
+
+a:hover {
+    color: red;
+}
