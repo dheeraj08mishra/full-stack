@@ -1,4 +1,3 @@
-ChatGPT
 CSS - Cascade Style Sheet
 CSS stands for Cascading Style Sheets, where "cascade" refers to the process of styles being applied in a particular order, with later styles potentially overwriting earlier ones.
 
