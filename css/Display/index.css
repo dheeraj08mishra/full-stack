@@ -1,0 +1,22 @@
+h1,h2{
+    display: inline;
+}
+
+#div1{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+#div2{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 20px;
+}
