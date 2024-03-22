@@ -1,0 +1,23 @@
+
+.container{
+    border: 2px solid black;
+    width: 800px;
+    height: 300px;
+    margin: 20px;
+    padding: 30px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+
+.item{
+    border: 1px solid black;
+    width: 100px;
+    height: 20px;
+    margin: 20px;
+    padding: 30px;
+    background-color: lightgray;
+}

@@ -1,0 +1,26 @@
+#parent{
+    background-color: brown;
+    display: flex;
+    justify-content: center; /* align items horizontally  center(main axis)*/
+    height: 500px;
+    align-items: center; /* align items vertically center (cross axis)*/ 
+    gap: 10px;
+}
+.child{
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    #parent{
+        flex-direction: column;
+        background-color: cadetblue;
+    }
+    
+}
