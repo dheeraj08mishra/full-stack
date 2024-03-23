@@ -1,18 +1,9 @@
-a(); //undefined
-function a(){
-    console.log(b);
-}
-var b = 10;
-a(); //10;
+console.log(b); //undefined
+console.log(a); //cannot access 'a' before initialization
+let a =10;
+var b = 100;
+console.log(window.a); //undefined
+console.log(window.b); //100
 
-
-let c =10;
-
-function d(){
-    e();
-    function e(){
-        console.log(c);
-    }
-    console.log(c);
-}
-d(); //10 10
+const c = 10;
+c= 100; //TypeError: Assignment to constant variable.
