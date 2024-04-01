@@ -2,6 +2,7 @@ import React from "react";
 import ResCard from "./ResCard";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
+import { Link } from "react-router-dom";
 // config driven UI
 
 // not using keys (not acceptable) <<<< index as key << unique id
@@ -23,8 +24,10 @@ const Body = () => {
       response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
-    setFilterData(response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-      ?.restaurants);
+    setFilterData(
+      response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
   };
 
   return responseData.length === 0 ? (
@@ -38,17 +41,21 @@ const Body = () => {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button className="search-btn" onClick={() => {
-            console.log({searchText})
-           
-           const filterCurrent= filterData.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
-           if(searchText.length === 0){
-            setFilterData(responseData);
-           }else{
-            setFilterData(filterCurrent);
-           }
-            
-          }}>
+          <button
+            className="search-btn"
+            onClick={() => {
+              console.log({ searchText });
+
+              const filterCurrent = filterData.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              if (searchText.length === 0) {
+                setFilterData(responseData);
+              } else {
+                setFilterData(filterCurrent);
+              }
+            }}
+          >
             Search
           </button>
         </div>
@@ -66,12 +73,11 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        console.log(responseData);
-        {filterData.map((res) => {
-          return <ResCard key={res.info.id} resData={res} />;
-        })}
-        {/* Restaurant card */}
-        {/* <ResCard /> */}
+        {filterData.map((res) => (
+          <Link key={res.info.id} to={"/restaurant/"+res.info.id}>
+            <ResCard  resData={res} />;
+          </Link>
+        ))}
       </div>
     </div>
   );
