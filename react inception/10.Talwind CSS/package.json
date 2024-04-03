@@ -1,0 +1,31 @@
+{
+  "name": "4.foodorderingapp",
+  "version": "1.0.0",
+  "description": "Food ordering app in react",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dheeraj08mishra/full-stack.git#main"
+  },
+  "author": "Dheeraj Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dheeraj08mishra/full-stack/issues"
+  },
+  "homepage": "https://github.com/dheeraj08mishra/full-stack/tree/main#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.38",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
+  }
+}
