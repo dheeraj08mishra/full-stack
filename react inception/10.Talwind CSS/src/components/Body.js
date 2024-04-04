@@ -3,10 +3,10 @@ import ResCard from "./ResCard";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
+import { HOME_PAGE_URL } from "../utils/constants";
 
 import useOnlineStatus from "../utils/useOnlineStatus";
 // config driven UI
-
 
 // not using keys (not acceptable) <<<< index as key << unique id
 const Body = () => {
@@ -19,9 +19,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(HOME_PAGE_URL);
     const response = await data.json();
     setResponseData(
       response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
@@ -45,11 +43,12 @@ const Body = () => {
       <div className="searchFilter flex items-center">
         <div className="search m-4 p-4">
           <input
-            type="text" className="border border-solid border-black"
+            type="text"
+            className="border border-solid border-black"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button 
+          <button
             className="px-4 m-4 py-2 bg-blue-500 text-white rounded-2xl"
             onClick={() => {
               const filterCurrent = filterData.filter((res) =>
@@ -66,28 +65,26 @@ const Body = () => {
           </button>
         </div>
         <div className="search m-4 p-4 ">
-        <button
-          className="px-4 py-2 bg-blue-500 text-white rounded-2xl"
-          onClick={() => {
-            const filterData = responseData.filter(
-              (res) => res.info.avgRating > 4.5
-            );
-            // setResponseData(filterData);
-            console.log(filterData);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+          <button
+            className="px-4 py-2 bg-blue-500 text-white rounded-2xl"
+            onClick={() => {
+              const filterData = responseData.filter(
+                (res) => res.info.avgRating > 4.5
+              );
+              // setResponseData(filterData);
+              console.log(filterData);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
         </div>
-       
       </div>
       <div className="flex flex-wrap ">
         {filterData.map((res) => (
-          <Link key={res.info.id} to={"/restaurant/"+res.info.id}>
+          <Link key={res.info.id} to={"/restaurant/" + res.info.id}>
             <div className=" rounded-2xl">
-            <ResCard  resData={res} /> 
+              <ResCard resData={res} />
             </div>
-            
           </Link>
         ))}
       </div>

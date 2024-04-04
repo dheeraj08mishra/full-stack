@@ -7,5 +7,7 @@ export const CDN_URL =
 
 export const RestaurantMenu_URL =
 // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4967245478821&lng=73.75084452331068&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4967245478821&lng=73.75084452331068&restaurantId=";
+   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.449923&lng=80.331871&restaurantId=";
 /// name export
+
+export const HOME_PAGE_URL =  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.449923&lng=80.331871&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
