@@ -1,0 +1,20 @@
+{
+  "name": "server-2",
+  "version": "1.0.0",
+  "description": "starting to use express",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "nodemon index.mjs",
+    "dev": "nodemon index.js"
+  },
+  "author": "dheeraj mishra <dheeraj997mishra@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

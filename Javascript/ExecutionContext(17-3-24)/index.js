@@ -1,8 +1,8 @@
-var n=2;
+var n = 2;
 function square(num) {
   var ans = num * num;
   return ans;
-};
+}
 var square2 = square(n);
 var square4 = square(4);
 
@@ -28,3 +28,47 @@ square4 is assigned 16
 */
 console.log(square2);
 console.log(square4);
+
+/// to handle n number of arguments wuthout knowing the count of those
+
+function sum() {
+  console.log(arguments);
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+
+console.log(sum(1, 2, 3));
+
+console.log(sum(1, 2, 3, 4, 5));
+
+/// using es6 way
+
+function sum1(...args) {
+  console.log(args);
+  let sum = 0;
+  for (let i = 0; i < args.length; i++) {
+    sum += args[i];
+  }
+  return sum;
+}
+
+console.log(sum(1, 2, 3));
+
+console.log(sum(1, 2, 3, 4, 5));
+
+
+
+// object declaration with [] 
+//1st benfit we can have space in keys using obj['living city']  something like
+
+// 2nd benefit we can pass variable
+
+var sal = 'salary';
+var obj ={
+  a:123,
+  b:345
+}
+obj[sal] = '######';

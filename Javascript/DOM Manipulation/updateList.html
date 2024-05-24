@@ -1,0 +1,65 @@
+
+<!-- Write a program in JavaScript to do the below-mentioned task:
+
+Fix the list of elements by adding the missing element using DOM methods like querySelectorAll and insertBefore.
+
+Note:
+
+Add the missing number to the list without changing the HTML part of the code. -->
+
+
+<!DOCTYPE html>
+<html>
+<!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an image from assets folder correct way to set src attribute is 
+
+src = 'profile.png'
+
+instead of 
+
+src = './assets/profile.png'
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+</body>
+
+<script>
+    // Write your JS program here ====
+    let count=1;
+    const list = document.querySelectorAll('li');
+    for (let index = 0; index < list.length; index++) {
+        const element = list[index].innerText;
+        if(parseInt(element)!==count){
+            const newNode = document.createElement('li');
+            newNode.innerText=count;
+            const ulList = document.querySelector('ul');
+            ulList.insertBefore(newNode,ulList.children[count-1]);
+            count=count+2;
+        } else{
+            count++;
+        }
+    }
+    
+</script>
+
+</html>
