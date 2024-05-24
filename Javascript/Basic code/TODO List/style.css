@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#parentDiv {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    max-height: 90vh; /* Ensure the container does not exceed the viewport height */
+    overflow: hidden; /* Prevent overflow */
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#btn {
+    background-color: #28a745;
+    color: white;
+}
+
+button#clear {
+    background-color: #dc3545;
+    color: white;
+}
+
+button#random {
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 60vh; /* Limit the height of the list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Optional: Add a border around the list */
+    border-radius: 5px;
+}
+
+li {
+    background-color: #f8f9fa;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #e9ecef;
+}

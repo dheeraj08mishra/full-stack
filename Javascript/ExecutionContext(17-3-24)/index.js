@@ -58,3 +58,17 @@ function sum1(...args) {
 console.log(sum(1, 2, 3));
 
 console.log(sum(1, 2, 3, 4, 5));
+
+
+
+// object declaration with [] 
+//1st benfit we can have space in keys using obj['living city']  something like
+
+// 2nd benefit we can pass variable
+
+var sal = 'salary';
+var obj ={
+  a:123,
+  b:345
+}
+obj[sal] = '######';
