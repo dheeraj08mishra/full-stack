@@ -1,15 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!-- Please NOTE that the link to assets (like images) need to be set in global context.
-For example:
-To access an image from assets folder correct way to set src attribute is 
-
-src = 'profile.png'
-
-instead of 
-
-src = './assets/profile.png'
--->
 
 <head>
     <meta charset="UTF-8" />
@@ -19,30 +9,40 @@ src = './assets/profile.png'
 </head>
 
 <body>
-    <div id="doubleHolder">
-        <button class="double">double</button>
-    </div>
-
+    <button id="all">Remove All</button>
+    <ul id="taskList">
+        <li>
+            <p>Task - 1</p>
+            <button class="deleteBtn">delete</button>
+        </li>
+        <li>
+            <p>Task - 2</p>
+            <button class="deleteBtn">delete</button>
+        </li>
+        <li>
+            <p>Task - 3</p>
+            <button class="deleteBtn">delete</button>
+        </li>
+        <li>
+            <p>Task - 4</p>
+            <button class="deleteBtn">delete</button>
+        </li>
+    </ul>
     <script>
         // Write your JS program here =========
 
-       document.getElementById('doubleHolder').addEventListener('click', function(e){
-           if(e.target.classList.contains('double')){
-               const firstButton = document.createElement('button');
-               firstButton.textContent = 'double';
-               firstButton.classList.add('double');
+        // Event listener for the "Remove All" button
+        document.getElementById('all').addEventListener('click', (event) => {
+            const ul = document.getElementById('taskList');
+            ul.innerHTML = ''; // Remove all list items
+        }, false);
 
-               const secondButton = document.createElement('button');
-               secondButton.textContent = 'double';
-               secondButton.classList.add('double');
-
-                document.getElementById('doubleHolder').appendChild(firstButton);
-                document.getElementById('doubleHolder').appendChild(secondButton);
-                document.getElementById('doubleHolder').removeChild(e.target);
-           }
-       })
-
-        // ======================================
+        // Event listener for the delete buttons within the list
+        document.getElementById('taskList').addEventListener('click', function (event) {
+            if (event.target && event.target.classList.contains('deleteBtn')) {
+                event.target.closest('li').remove(); // Remove the closest parent 'li' element
+            }
+        }, false);
     </script>
 </body>
 
