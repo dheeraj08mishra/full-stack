@@ -1,4 +1,3 @@
-// increment and decrement btn
 document.addEventListener("DOMContentLoaded",()=>{
     const incrementBtn = document.querySelector("#btnIncrease");
     const decrementBtn = document.querySelector("#btnDecrease");
