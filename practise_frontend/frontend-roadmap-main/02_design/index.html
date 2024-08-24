@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body style="font-family: sans-serif">
+    <h1>Different Websites Search Forms</h1>
+    <hr />
+    <form action="https://www.youtube.com/results">
+      <label for="firstname">Search :</label>
+      <input
+        id="firstname"
+        type="text"
+        placeholder="Enter Search Query"
+        name="search_query"
+      />
+      <button type="submit">Search for Youtube data</button>
+    </form>
+    <br />
+    <form action="https://www.flipkart.com/search">
+      <label for="firstname">Search :</label>
+      <input
+        id="firstname"
+        type="text"
+        placeholder="Enter Search Query"
+        name="q"
+      />
+      <button type="submit">Search for Flipkart data</button>
+    </form>
+    <br />
+    <form action="https://www.amazon.in/s">
+      <label for="firstname">Search :</label>
+      <input
+        id="firstname"
+        type="text"
+        placeholder="Enter Search Query"
+        name="k"
+      />
+      <button type="submit">Search for Amazon data</button>
+    </form>
+
+    <hr />
+    <h3>Sign up Form for website</h3>
+    <form action="http://127.0.0.1:5500/full-stack/practise_frontend/frontend-roadmap-main/02_design/index.html">
+      <p>
+        <label for="firstname">First Name :</label>
+        <input
+          id="firstname"
+          type="text"
+          placeholder="First Name"
+          name="firstName" required
+        />
+      </p>
+      <p>
+        <label for="lastName">Last Name :</label>
+        <input
+          id="lastName"
+          type="text"
+          placeholder="Last Name"
+          name="lastName" required
+        />
+      </p>
+      <p>
+        <label for="email">Email :</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="email"
+          name="email" required
+        />
+      </p>
+      <p>
+        <label for="Phone">Phone :</label>
+        <input
+          id="Phone"
+          type="tel"
+          placeholder="Mobile No."
+          name="phone" required maxlength="10"
+        />
+      </p>
+
+      <p>
+        <input
+          id="Phone"
+          type="checkbox"
+          required name="agree" value="true"
+        />I agree to the Agreement
+      </p>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>

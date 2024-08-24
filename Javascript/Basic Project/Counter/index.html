@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/161084577?v=4" />
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <div class="navLeft">
+            <a href="#" class="back">&lt</a>
+            <a class="logo" href="#"><img src="./images/Tick Tock.gif" alt="logo"></a>
+        </div>
+        <div class="navMiddle">
+            <h1>Counter</h1>
+        </div>
+        <div class="navRight">
+            <a href="#" class="theme">🌞</a>
+            <a href="#" class="theme">🌙</a>
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github Repo" href=""
+                class="github">
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <div class="counter">
+            <div class="counter-value">
+                <span id="count" class="value">0</span>
+            </div>
+            <div class="counter-control">
+                <button class="btn btn-primary" id="btnDecrease">-</button>
+                <button class="btn btn-primary" id="btnIncrease">+</button>
+            </div>
+            <div class="change">
+                <label for="changeBy">increment/Decrement by:</label>
+                <input type="number" id="changeBy" class="changeBy" value="1" min="1" max="10">
+            </div>
+            <div class="counter-control">
+                <button class="btn btn-primary" id="btnReset">Reset</button>
+            </div>
+        </div>
+</body>
+
+</html>

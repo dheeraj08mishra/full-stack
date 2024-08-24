@@ -1,0 +1,68 @@
+p{
+    text-align: center;
+    text-decoration: solid;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 32px;
+    color: teal;
+}
+
+h1{
+    color: brown;
+    font-style: italic;
+}
+
+a{
+    text-decoration:none;
+}
+
+[attr1]:hover{
+    color: aqua;
+    cursor: pointer;
+    background-color: blanchedalmond;
+
+}
+
+
+#parent{
+     max-width: 50px; 
+    background-color: aqua;
+    max-height: 10px;
+    padding: 10px;
+   
+}
+#child{
+    max-width: 50%;
+    background-color: aquamarine;
+    max-height: 50%;
+    overflow: auto;
+}
+
+
+#photoParent{
+    height: 200px;
+    width: 200px;
+    background-color: blanchedalmond;
+    border-radius: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+#circleP{
+    text-align: left;
+}
+img{
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+}
+
+.inline{
+    display: block;
+    background-color: antiquewhite;
+    width: 200px;
+}
+.inline2{
+    display: block;
+    background-color: aquamarine;
+}
