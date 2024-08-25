@@ -1,4 +1,99 @@
-body {
+@font-face {
+    font-family: "Trickster";
+    src:
+        local("Trickster"),
+        url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+        url("trickster-outline.otf") format("opentype"),
+        url("trickster-outline.woff") format("woff");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.navBar {
+    font-family: "Trickster";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(180deg, lavenderblush 0%, white 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navBar .navLeft {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: .5rem;
+}
+
+.navBar .navLeft .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    color: black;
+    transform: scaleY(2);
+}
+
+.navBar .navLeft .logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: .5rem;
+}
+
+.navBar .navLeft .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.navBar .navMiddle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.navBar h1 {
+    margin: 0;
+}
+
+.navBar .navRight {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex: 1;
+    text-align: right;
+}
+
+.navBar .navRight .github {
+    margin-left: 1rem;
+}
+
+.navBar .navRight img {
+    width: 30px;
+    height: 30px;
+    vertical-align: text-bottom;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -6,6 +101,10 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+} */
+
+.parent-container {
+    height: 100vh;
 }
 
 #weather {
@@ -14,6 +113,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 400px;
+    margin: auto;
 }
 
 #input {
