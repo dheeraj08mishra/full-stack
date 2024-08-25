@@ -12,6 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const gridItemValues = document.querySelectorAll(".grid-item");
   colorBtn.addEventListener("click", () => {
+    if (colorNumberValue.value === "") {
+      alert("Please enter a number between 1 and 9");
+      return;
+    }
+    if (
+      parseInt(colorNumberValue.value) > 9 ||
+      parseInt(colorNumberValue.value) < 1
+    ) {
+      alert("Please enter a number between 1 and 9");
+      colorNumberValue.value = "";
+      return;
+    }
     gridItemValues.forEach((currentGridItem) => {
       currentGridItem.classList.remove("active");
       if (
