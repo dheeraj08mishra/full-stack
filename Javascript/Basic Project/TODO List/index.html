@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
+
 <body>
+    <nav class="navBar">
+        <div class="navLeft">
+            <a href="#" class="back">&lt</a>
+        </div>
+        <div class="navMiddle">
+            <h1>To Do List</h1>
+        </div>
+        <div class="navRight">
+            <a href="https://github.com/dheeraj08mishra/full-stack/tree/main/Javascript/Basic%20Project/TODO%20List">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github Repo" class="github">
+            </a>
+        </div>
+    </nav>
     <div id="parentDiv">
         <input type="text" id="input" placeholder="Enter task to add">
         <br>
@@ -15,6 +31,7 @@
         <button id="random">Generate Random Task</button>
         <ul id="ul"></ul>
     </div>
-    <script src="index.js"></script>
+
 </body>
+
 </html>
