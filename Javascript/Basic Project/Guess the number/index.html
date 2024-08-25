@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="navLeft">
+            <a href="#" class="back">&lt</a>
+        </div>
+        <div class="navMiddle">
+            <h1>Guess the number</h1>
+        </div>
+        <div class="navRight">
+            <a
+                href="https://github.com/dheeraj08mishra/full-stack/tree/main/Javascript/Basic%20Project/Guess%20the%20number">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github Repo" class="github">
+            </a>
+        </div>
+    </nav>
+    <div class="container text-center">
+        <form action="" class="form" id="form">
+            <label for="guess" class="label">Guess the number between 0 and 100</label>
+            <br>
+            <br>
+            <input type="number" id="input" placeholder="Enter your guess" min="0" max="100" required autofocus>
+            <div>
+                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary" id="reset">Reset</button>
+                <button type="button" class="btn btn-primary" id="startGame" disabled="true">Start Game</button>
+            </div>
+            <div>
+                <p class="message" id="message"></p>
+                <p class="guessDisplay" id="guessDisplay"></p>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
