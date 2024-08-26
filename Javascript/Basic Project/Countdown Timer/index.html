@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="navLeft">
+            <a href="#" class="back">&lt</a>
+        </div>
+        <div class="navMiddle">
+            <h1>Countdown Timer</h1>
+        </div>
+        <div class="navRight">
+            <a
+                href="https://github.com/dheeraj08mishra/full-stack/tree/main/Javascript/Basic%20Project/Countdown%20Timer">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github Repo" class="github">
+            </a>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <div class="display" id="display">
+            <input type="number" id="minMSBInput" min="0" max="5" required>
+            <input type="number" id="minLSBInput" min="0" max="9" required>
+            <span>:</span>
+            <input type="number" id="secMSBInput" min="0" max="5" required>
+            <input type="number" id="secLSBInput" min="0" max="9" required>
+        </div>
+        <div class="btns">
+            <button id="start" class="btn btn-primary">Start</button>
+            <button id="pause" class="btn btn-primary">Pause</button>
+            <button id="reset" class="btn btn-primary">Reset</button>
+        </div>
+        <p>Please enter a valid time in <strong>MM:SS</strong></p>
+    </div>
+
+
+
+</body>
+
+</html>
