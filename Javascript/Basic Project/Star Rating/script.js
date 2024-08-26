@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setsTars = (e) => {
     const startValue = e.target.getAttribute("data-value");
     if (startValue) {
-      console.log(startValue);
       for (let count = 0; count < startValue; count++) {
         stars[count].classList.add("star-filled");
       }
