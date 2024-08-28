@@ -31,12 +31,20 @@ div {
 }
 
 .box2 {
-    width: 50%;
+    /* width: 50%;
     height: 50%;
     background-color: lightgrey;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; */
+    /* transform: translate(-50%, -50%); */
+    background-color: lightgrey;
+    position: fixed;
+    margin: auto;
+    inset: 0;
+    height: 50%;
+    width: 50%;
     box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.5);
+
+
 }
