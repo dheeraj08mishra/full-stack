@@ -3,6 +3,12 @@ div {
     background-color: aquamarine;
 }
 
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
 .css-element {
     position: absolute;
     background-color: lightcoral;
