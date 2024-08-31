@@ -1,0 +1,248 @@
+@font-face {
+    font-family: "Trickster";
+    src:
+        local("Trickster"),
+        url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+        url("trickster-outline.otf") format("opentype"),
+        url("trickster-outline.woff") format("woff");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.navBar {
+    font-family: "Trickster";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(180deg, lavenderblush 0%, white 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navBar .navLeft {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: .5rem;
+}
+
+.navBar .navLeft .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    color: black;
+    transform: scaleY(2);
+}
+
+.navBar .navLeft .logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: .5rem;
+}
+
+.navBar .navLeft .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.navBar .navMiddle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.navBar h1 {
+    margin: 0;
+}
+
+.navBar .navRight {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex: 1;
+    text-align: right;
+}
+
+.navBar .navRight .github {
+    margin-left: 1rem;
+}
+
+.navBar .navRight img {
+    width: 30px;
+    height: 30px;
+    vertical-align: text-bottom;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+} */
+
+#parentDiv {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    text-align: center;
+    max-height: 90vh;
+    /* Ensure the container does not exceed the viewport height */
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#btn {
+    background-color: #28a745;
+    color: white;
+}
+
+button#clear {
+    background-color: #dc3545;
+    color: white;
+}
+
+button#random {
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 60vh;
+    /* Limit the height of the list */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    /* Optional: Add a border around the list */
+    border-radius: 5px;
+}
+
+li {
+    background-color: #f8f9fa;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #e9ecef;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 0 20px #0006;
+    background-color: #1f1f1f;
+    width: 90%;
+}
+
+.container h2 span {
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+}
+
+
+@media screen and (width>=600px) {
+    .container {
+        padding: 50px;
+        margin: 50px auto;
+    }
+
+}
+
+.dice-holder {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width>=600px) {
+    .dice-holder {
+        flex-direction: row;
+        gap: 50px;
+    }
+}
+
+.dice {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+
+button {
+
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 20px;
+    font-size: medium;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+
+}
