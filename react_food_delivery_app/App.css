@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap");
+
+:root {
+    font-family: "Merriweather Sans", sans-serif;
+    --nav-color: #675d50;
+    --nav-text: #fff;
+    --primary-color: #f3deba;
+    --secondary-color: #abc4aa;
+    --hover-color: #a9907e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+    background-color: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    /* Make container a flexbox */
+    justify-content: space-between;
+    /* Distribute items with space between */
+    align-items: center;
+    /* Vertically center the items */
+    background-color: var(--nav-color);
+    font-size: 1.2rem;
+    font-family: "Merriweather Sans", sans-serif;
+    height: 70px;
+    padding: 0 20px;
+    /* Optional padding to give some space */
+}
+
+.container img {
+    width: 50px;
+    /* Control the width of the logo */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.navBar {
+    display: flex;
+    justify-content: flex-end;
+    /* Align nav to the right */
+    align-items: center;
+    /* Vertically center the nav */
+}
+
+.navBar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navBar ul li {
+    padding: 10px 15px;
+    margin: 0 10px;
+}
+
+.navBar ul li a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: bold;
+}
+
+.navBar ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Style for the container holding all the cards */
+.card-container {
+    padding: 0;
+    margin: 32px 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    /* Space between cards */
+}
+
+/* Style for each card */
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* Layout with three rows: image, content, and footer */
+    grid-template-columns: 1fr;
+    /* Single column layout */
+    gap: 10px;
+    /* Space between grid items */
+    background: #fff;
+    /* Background color for the card */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for card */
+    overflow: hidden;
+    /* Ensure content doesn’t overflow */
+    padding: 10px;
+    /* Padding inside the card */
+    transition: transform 0.2s;
+    /* Smooth hover effect */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: scale(1.02);
+    /* Slight zoom effect on hover */
+}
+
+/* Style for images within cards */
+.card img {
+    width: 100%;
+    /* Image covers the width of the card */
+    height: 200px;
+    /* Fixed height for images */
+    object-fit: cover;
+    /* Cover the container without distortion */
+    grid-row: 1;
+    /* Place image in the first row */
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+    /* Optional border for separation */
+}
+
+/* Style for the text content within the card */
+.card-content {
+    grid-row: 2;
+    /* Place text content in the second row */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* Space between text items */
+}
+
+.card-content h3,
+.card-content h4 {
+    margin: 0;
+    /* Remove default margin */
+}
+
+.card-content h4 {
+    font-size: 1rem;
+    /* Adjust font size for h4 */
+    color: #555;
+    /* Set a subtle color for h4 */
+}
+
+/* Style for the footer within the card */
+.card-footer {
+    grid-row: 3;
+    /* Place footer in the third row */
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    /* Smaller font size for footer */
+    color: #777;
+    /* Subtle color for footer */
+}
+
+/* Style for the rating section */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between icon and text */
+}
+
+.rating-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    /* Circle with background and icon color */
+}
+
+/* Style for the cost section */
+.cost {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between icon and text */
+}
+
+.cost-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    /* Circle with background and icon color */
+}
+
+/* Style for the delivery time section */
+.delivery-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between icon and text */
+}
+
+.delivery-time-icon {
+    width: 24px;
+    height: 24px;
+    /* Size of the delivery time icon */
+}
+
+/* Optional: If you want a circular background for the icon */
+.delivery-time-icon-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    /* Background color for the circle */
+    color: #333;
+    /* Icon color */
+}
