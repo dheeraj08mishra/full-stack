@@ -77,9 +77,9 @@ body {
     padding: 0;
     margin: 32px 16px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     /* Responsive grid */
-    gap: 20px;
+    gap: 40px;
     /* Space between cards */
 }
 
@@ -104,11 +104,50 @@ body {
     /* Padding inside the card */
     transition: transform 0.2s;
     /* Smooth hover effect */
+    max-width: 350px;
+    /* Set a maximum width for each card */
+    width: 100%;
+    /* Ensure card width doesn't exceed its container */
+    margin: 0 auto;
+    /* Center each card if the container has extra space */
 }
+
+/* Media query for reducing gap on smaller screens */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        /* Smaller gap for mobile screens */
+    }
+}
+
+/* Adjust gap dynamically when few cards are visible */
+.card-container.filtered {
+    gap: 30px;
+    /* Increase the gap after filtering */
+}
+
+/* When there are fewer cards (like after filtering), center the grid and increase spacing */
+.filtered .card {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.filtered {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    /* Center content horizontally */
+}
+
+/* Button styling remains the same */
+
 
 /* Card hover effect */
 .card:hover {
     transform: scale(1.02);
+    transition: transform 0.2s ease;
     /* Slight zoom effect on hover */
 }
 
@@ -254,4 +293,83 @@ button:hover {
 button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.shimmer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.shimmer-card {
+    height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right,
+            #f0f0f0 0%,
+            #e0e0e0 50%,
+            #f0f0f0 100%);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Style for the search input */
+input[type="text"] {
+    width: 100%;
+    /* Full width */
+    max-width: 400px;
+    /* Restrict maximum width */
+    padding: 10px 15px;
+    /* Padding inside the input */
+    margin: 10px 10px;
+    /* Space around the input */
+    border: 2px solid var(--secondary-color);
+    /* Border color matching theme */
+    border-radius: 8px;
+    /* Rounded corners */
+    font-size: 1rem;
+    /* Font size for input text */
+    background-color: #fff;
+    /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Focus state for the search input */
+input[type="text"]:focus {
+    border-color: var(--hover-color);
+    /* Change border color on focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Increase shadow on focus */
+    outline: none;
+}
+
+/* Placeholder style */
+input[type="text"]::placeholder {
+    color: #999;
+    /* Lighter placeholder text */
+    font-style: italic;
 }
