@@ -7,6 +7,9 @@
     --primary-color: #f3deba;
     --secondary-color: #abc4aa;
     --hover-color: #a9907e;
+    --button-bg: #abc4aa;
+    --button-text: #fff;
+    --button-hover-bg: #a9907e;
 }
 
 body {
@@ -227,4 +230,28 @@ body {
     /* Background color for the circle */
     color: #333;
     /* Icon color */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
