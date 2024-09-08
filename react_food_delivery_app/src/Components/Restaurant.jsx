@@ -1,4 +1,4 @@
-import { CDN_url } from "../utils/contants";
+import { CDN_url } from "../utils/constants";
 const CardInfo = ({ data }) => {
   const { avgRating, name, imageUrl, cuisines, costForTwo, deliveryTime } =
     data;

@@ -1,0 +1,113 @@
+.recommended-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.recommended-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.recommended-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    /* Adjust the width of each item */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.recommended-item img {
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: 8px;
+    margin-left: 20px;
+    /* Add space between text and image */
+}
+
+.recommended-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 350px;
+    /* Limit description width */
+}
+
+.recommended-item-content h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.recommended-item-content p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.recommended-item-content h4 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* Updated for recommended item */
+.recommended-item-content h2 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.recommended-item-content p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+    /* Lighter color for the description */
+}
+
+.recommended-item-content h4.price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.recommended-item-content .rating {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.rating-star {
+    color: #ffd700;
+    /* Gold color for the star */
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+/* Styling for price text */
+.price-value {
+    color: #2a9d8f;
+    /* Greenish color for price */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
