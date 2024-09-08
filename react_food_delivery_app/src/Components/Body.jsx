@@ -2,12 +2,14 @@ import responseData from "../utils/Response.json";
 import CardInfo from "./Restaurant";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+
 let dataFetchedInitially = [];
 let offsetInfo = {};
 const Body = () => {
   const [dataToShow, setDataToShow] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [login, setLogin] = useState("Login");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +42,6 @@ const Body = () => {
 
         dataFetchedInitially = parsedData;
         setDataToShow(parsedData);
-        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -74,6 +75,14 @@ const Body = () => {
     });
     setDataToShow(filteredData);
   };
+
+  const loginLogoutFunction = () => {
+    setLogin(
+      login === "Login"
+        ? (alert("You are logged out"), "Logout")
+        : (alert("You are logged in"), "Login")
+    );
+  };
   return (
     <>
       {/* Search input and buttons */}
@@ -86,6 +95,7 @@ const Body = () => {
       <button onClick={searchUpdatedClick}>Search</button>
       <button onClick={filteredData}>Top Rated</button>
       <button onClick={restoreData}>Reset</button>
+      <button onClick={loginLogoutFunction}>{login}</button>
       {/* Display shimmer or card data */}
       <div
         className={`card-container ${
@@ -96,7 +106,9 @@ const Body = () => {
           <Shimmer />
         ) : (
           dataToShow.map((currentRow) => (
-            <CardInfo key={currentRow.id} data={currentRow} />
+            <Link key={currentRow.id} to={"/restaurant/" + currentRow.id}>
+              <CardInfo data={currentRow} />
+            </Link>
           ))
         )}
       </div>
