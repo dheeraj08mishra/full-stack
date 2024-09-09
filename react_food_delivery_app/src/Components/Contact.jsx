@@ -1,7 +1,8 @@
 import React from "react";
+import LoginForm from "./LoginForm";
 
 function Contact() {
-  return <div>Contact</div>;
+  return <LoginForm />;
 }
 
 export default Contact;

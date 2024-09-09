@@ -75,7 +75,7 @@ body {
 /* Style for the container holding all the cards */
 .card-container {
     padding: 0;
-    margin: 32px 16px;
+    margin: 32px 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     /* Responsive grid */
